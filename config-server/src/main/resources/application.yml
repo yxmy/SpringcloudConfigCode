@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/yxmy/SpringcloudConfig/
+          search-paths: respo
+          username: yxmy
+          password: laopo5201314...
+server:
+  port: 8888
