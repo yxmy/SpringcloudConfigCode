@@ -9,10 +9,21 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
-server:
-  port: 8881
-
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8889/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
